@@ -7,6 +7,10 @@
 # Neste exemplo, cada movimento reduz a entropia do sistema, isto e, aumenta-se a incerteza da localizao.
 # E cada nova leitura aumenta a entropia do sistema, isto e, diminui-se a incerteza da localizacao.
 
+# SENSE <========> MOVE
+# aumenta         diminui
+# entropia       entropia 
+
 # A pior incerteza possivel e a distribuicao uniforme de probabilidades porque todos os valores possiveis possuem probabilidades iguais.
 
 # p eh o vetor (circular) inicial que representa cada posicao possivel no mapa. Apos cada nova medica ou novo movimento, suas probabilidades sao atualizadas 'in place'

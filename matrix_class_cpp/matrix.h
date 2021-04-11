@@ -8,7 +8,7 @@ class Matrix
     private:
 
         // linhas e colunas
-        int rows, columns;
+        std::vector<float>::size_type rows, columns;
 
         // a propria matrix (grid)
         std::vector< std::vector<float> > grid;
@@ -16,18 +16,25 @@ class Matrix
 
     public:
 
-        // construtor default da Matrix -> parece nao fazer sentido ainda
-        // Matrix();
-
         // construtor da Matrix passando linhas e colunas e um mesmo valor para todas celulas
         Matrix( int rows, int columns, float value );
 
         // construtor da MatriX passando grid pronto
-        Matrix(std::vector< std::vector<float> > grid_in);
+        Matrix(std::vector< std::vector<float> > grid_in);  
 
+        // Get grid
         std::vector< std::vector<float> > getGrid();
 
-        // recupera uma coluna
+        // Set Grid
+        void setGrid(std::vector< std::vector<float> > grid_in);
+
+        // Get Rows
+        std::vector<float>::size_type getRows();
+
+        // Get Cols
+        std::vector<float>::size_type getCols();
+
+        // Get Matrix Column
         std::vector< float > getColumn(int column);
 
         // calcula produto escalar

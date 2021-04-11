@@ -150,6 +150,26 @@ int Matrix::determinant(){
         throw invalid_argument("For now, it's possible calculate determinants of matrices with size 1x1 or 2x2");
 }
 
+// Transpose
+Matrix Matrix::transpose(){
+
+    vector< vector<float> > grid_res;
+    vector< float > column_transpose;
+
+    for (int j = 0; j < getCols(); ++j){
+
+        for (int i = 0; i < getRows(); ++i){
+
+            column_transpose.push_back(grid[i][j]);
+        }
+
+        grid_res.push_back(column_transpose);
+        column_transpose.clear();
+    }
+
+    return Matrix(grid_res);
+}
+
 // Print Matrix
 void Matrix::printMatrix(){
 

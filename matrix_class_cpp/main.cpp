@@ -83,6 +83,14 @@ int main(){
     // Matrix m6 = Matrix(vector< vector<float> > (3, vector<float>(3, -2)));
     // cout << m6.determinant() << "\n";
 
+    // ######### TESTE Matriz Transposta
+    cout << "TEST Matrix transpose\n";
+    Matrix m1_T = m1.transpose();
+    cout << "Before Tranpose:\n";
+    m1.printMatrix();
+    cout << "After Tranpose:\n";
+    m1_T.printMatrix();
+
     return 0;
 }
 

@@ -37,21 +37,24 @@ class Matrix
         // Get Matrix Column
         std::vector< float > getColumn(int column);
 
-        // calcula produto escalar
+        // Dot Product of a vector
         int dotProduct(char axis, int indexGrid, std::vector< float > otherVector);
 
-        // multiplicação matrizes
+        // Matrix Multiplication
         Matrix multiplication(Matrix otherGrid);
 
-        // adição matrizes
+        // Matrix addition
         Matrix add(Matrix otherGrid);
 
-        // calcula determinante
+        // Determinant
         int determinant();
+
+        Matrix transpose();
 
         // Print Matrix
         void printMatrix();
 
+        // Print Vector
         void printVector(std::vector< float >);
 };
 
